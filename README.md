@@ -1,7 +1,29 @@
 
+---
+title: "README for Latex"
+author: [Lin Desong]
+date: "2024/08/03/ 21:20:20"
+keywords: [Markdown, Example]
+---
+
+- [keywords: \[Markdown, Example\]](#keywords-markdown-example)
+  - [Wiki](#wiki)
+  - [Pandoc](#pandoc)
+  - [MacTex](#mactex)
+  - [Using in VSCode](#using-in-vscode)
+  - [Configuration](#configuration)
+
 ### Wiki
 
 [LaTeX/Document Structure](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes)
+
+### Pandoc
+
+[Fonts](https://pandoc.org/MANUAL.html#fonts)
+
+```sh
+pandoc --pdf-engine=xelatex -V CJKmainfont=SimSong -V mainfont=Noto\ Serif\ TC  README.md -o README.pdf --from markdown --template ./Eisvogel/eisvogel.latex --listings -V sansfont=Noto\ Sans\ TC
+```
 
 ### MacTex
 
@@ -17,13 +39,13 @@ Install `LaTeX Workshop` in VSCode.
 
 这段代码包括了
 
-①XeLaTeX的配置
+① XeLaTeX的配置
 
-②两次编译 XeLaTeX，防止有些时候目录不显示（血泪）
+② 两次编译 XeLaTeX，防止有些时候目录不显示（血泪）
 
-③删除部分不需要的Tex编译时产生的多余文件
+③ 删除部分不需要的Tex编译时产生的多余文件
 
-④以上都是我一个个自己搜出来加上去的
+④ 以上都是我一个个自己搜出来加上去的
 
 ```json
 {
