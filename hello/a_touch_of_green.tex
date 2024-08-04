@@ -1,0 +1,97 @@
+% !TEX program = XeLaTeX
+% !TEX encoding = UTF-8
+\documentclass[a4paper,11pt,twoside,UTF8,fontset=none]{ctexart}
+\input{styles/font.sty}
+% 使用fontsize宏包设置特定部分的字体大小
+\usepackage{fontsize}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{geometry}
+% 设置页面边距
+\geometry{
+    top=2cm,
+    bottom=2cm,
+    inner=1.5cm,
+    outer=2cm,
+    bindingoffset=1cm
+}
+% 使用newtxtext宏包设置默认字体为Times New Roman
+\usepackage{newtxtext}
+\usepackage{lipsum}
+% 用於設置超連結
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen
+}
+% 用於加快編譯速度，生成PDF時註釋掉即可
+% \usepackage{syntonly}
+% \syntaxonly
+\usepackage{tocloft}
+
+
+
+% Custom packages
+\usepackage{styles/hdr_ftr}
+\usepackage{styles/linebreak}
+\input{commands.sty}
+\input{title.tex}
+\begin{document}
+\setlength{\headheight}{14pt}
+% 创建自定义标题页
+\begin{titlepage}
+    \centering
+    % 标题
+    {\Huge \bfseries \mytitle\par}
+    \vspace{1cm}
+
+    % 插入图片
+    \includegraphics[width=0.8\textwidth]{cover.jpg}\par
+    \vspace{1cm}
+
+    % 作者
+    {\Large \myauthor\par}
+    \vspace{0.5cm}
+
+    % 日期
+    {\Large \mydate\par}
+    \vspace{2cm}
+
+\end{titlepage}
+
+\onecolumn
+
+\pagestyle{empty}
+
+\cleardoublepage
+
+\tableofcontents
+
+\cleardoublepage
+
+\include{sections/frontmatter}
+
+\cleardoublepage
+
+\twocolumn
+
+\pagestyle{fancy}
+
+\include{sections/role_description}
+
+\include{sections/part_A}
+
+\include{sections/part_B}
+
+\begin{verbatim}
+    pub fn main() {
+        println!("hello world!");
+    }
+\end{verbatim}
+
+\texttt{print}
+
+\end{document}

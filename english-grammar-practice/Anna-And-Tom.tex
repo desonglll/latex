@@ -1,5 +1,11 @@
-\documentclass[twoside]{book}
-\usepackage[UTF8]{ctex}
+% !TEX program = XeLaTeX
+% !TEX encoding = UTF-8
+\documentclass[UTF8,nofonts]{ctexart}
+\usepackage{xeCJK}
+
+\setCJKmainfont{Source Han Serif TC}[ItalicFont=Source Han Serif TC]
+\setmonofont{Consolas}
+
 % 使用fontsize宏包设置特定部分的字体大小
 \usepackage{fontsize}
 \usepackage{graphicx} % Required for inserting images
@@ -7,8 +13,6 @@
 % 使用newtxtext宏包设置默认字体为Times New Roman
 \usepackage{newtxtext}
 \usepackage{lipsum} % 生成示例文本
-\renewcommand{\chaptername}{章节}
-
 % 设置页面边距
 \geometry{
     top=2cm,
@@ -26,26 +30,26 @@
 \fontsize{13}{15}\selectfont
 \tableofcontents % 生成目录
 
-\chapter{引言}
-\section{背景}
+\section{背 景}
+
+
+\begin{verbatim}
+    pub fn main() {
+        println!("hello world!");
+    }
+\end{verbatim}
 \lipsum[1-2] % 示例文本
 
-\chapter{方法}
+\
 \section{理论}
 \lipsum[3-4] % 示例文本
 
-\chapter{结果}
 \section{实验}
 \lipsum[5-6] % 示例文本
 
 \appendix
-\chapter{附录}
 \section{附录内容}
 \lipsum[7-8] % 示例文本
-
-\backmatter
-\chapter{参考文献}
-% 参考文献条目（如果使用 bibtex，需加载相关宏包并生成参考文献列表）
 
 
 \end{document}
