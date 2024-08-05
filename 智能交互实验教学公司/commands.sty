@@ -1,0 +1,25 @@
+\usepackage{tocloft}
+% 配置目录的省略号
+\renewcommand{\cftsecdotsep}{\cftdotsep}   % 节标题的省略号
+\renewcommand{\cftsubsecdotsep}{\cftdotsep} % 子节标题的省略号
+
+% for subsubsubsection
+\usepackage{titlesec}
+\usepackage{xcolor} % 用于设置字体颜色
+
+% 定义 \subsubsubsection 的计数器，并使其在每个 \subsubsection 下重置
+\newcounter{subsubsubsection}[subsubsection]
+
+\renewcommand{\thesubsubsubsection}{\arabic{subsubsubsection}.}
+
+\newcommand{\subsubsubsection}[1]{
+    \par
+    \refstepcounter{subsubsubsection} % 使计数器步进
+    \noindent\textcolor{black}{\normalsize \thesubsubsubsection\quad #1} % 设置标题样式，不加粗
+    \par
+}
+
+% 将section编号设置为中文数字
+\renewcommand{\thesection}{第\chinese{section}節}
+\renewcommand{\thesubsection}{\chinese{subsection}、}
+\renewcommand{\thesubsubsection}{（\chinese{subsubsection}）}

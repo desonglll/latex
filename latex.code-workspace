@@ -1,10 +1,20 @@
 {
 	"folders": [
 		{
+			"name": "latex",
 			"path": "."
 		},
 		{
+			"name": "hello",
 			"path": "hello"
+		},
+		{
+			"name": "智能交互实验教学公司",
+			"path": "智能交互实验教学公司"
+		},
+		{
+			"name": "template",
+			"path": "template"
 		}
 	],
 	"settings": {}

@@ -1,0 +1,25 @@
+\ProvidesPackage{styles/hdr_ftr}
+\input{title.tex}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% 默认页眉和页脚设置
+\fancyhf{}
+% 设置页眉
+\fancyhead[LE]{\myauthor} % 左侧偶数页（左侧页眉）
+\fancyhead[CE]{\mytitle} % 中间偶数页（页码）
+\fancyhead[RE]{} % 右侧偶数页（右侧页眉）
+\fancyhead[LO]{} % 左侧奇数页（左侧页眉）
+\fancyhead[CO]{\mytitle} % 中间奇数页（页码）
+\fancyhead[RO]{\leftmark} % 右侧奇数页（右侧页眉）
+
+% 设置页脚
+\fancyfoot[LE]{\thepage} % 左侧偶数页（左侧页脚）
+\fancyfoot[CE]{} % 中间偶数页（页码）
+\fancyfoot[RE]{} % 右侧偶数页（右侧页脚）
+\fancyfoot[LO]{} % 左侧奇数页（左侧页脚）
+\fancyfoot[CO]{} % 中间奇数页（页码）
+\fancyfoot[RO]{\thepage} % 右侧奇数页（右侧页脚）
+
+% 設置頁眉和頁腳的橫線
+\renewcommand{\headrulewidth}{0.4pt} % 頁眉下方橫線的厚度
+\renewcommand{\footrulewidth}{0.4pt} % 頁腳上方橫線的厚度
