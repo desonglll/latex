@@ -15,7 +15,7 @@
 \newcommand{\subsubsubsection}[1]{
     \par
     \refstepcounter{subsubsubsection} % 使计数器步进
-    \noindent\textcolor{black}{\normalsize \thesubsubsubsection\quad #1} % 设置标题样式，不加粗
+    \noindent\textcolor{black}{\large \thesubsubsubsection\quad #1} % 设置标题样式，不加粗
     \par
 }
 
@@ -23,3 +23,15 @@
 \renewcommand{\thesection}{第\chinese{section}節}
 \renewcommand{\thesubsection}{\chinese{subsection}、}
 \renewcommand{\thesubsubsection}{（\chinese{subsubsection}）}
+
+\titleformat{\section}
+{\large\bfseries} % 设置为 \large 和粗体
+{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\large\bfseries} % 设置为 \large 和粗体
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\large\bfseries} % 设置为 \large 和粗体
+{\thesubsubsection}{1em}{}
